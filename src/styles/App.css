@@ -1,0 +1,290 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color:white;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(135deg, #4caf50, #45a049);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+header img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Navigation Styles */
+nav{
+  margin-top: 1rem;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid black; /* Add transparent border for smooth transition */
+  border-radius: 5px;
+  transition: background 0.3s ease, border-color 0.3s ease; /* Include border-color in transition */
+}
+
+nav ul li a:hover {
+  border-color: black; /* Change border color on hover */
+  color: white;
+  background-color: black;
+}
+
+
+/* Button Styles */
+button {
+  cursor: pointer;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1.1rem;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Job Listings Styles */
+.job-listings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.job-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.job-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.job-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.job-card .job-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.job-card .job-footer .apply-btn {
+  background-color: #4caf50;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.job-card .job-footer .apply-btn:hover {
+  background-color: #45a049;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f1f1f1;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    padding: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .job-listings {
+    padding: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .job-card {
+    padding: 1rem;
+  }
+}
+
+/* Add a cool animation to the header */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+  animation: fadeIn 1s ease-out;
+}
+/* Login Form Styles */
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-form h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Register Form Styles */
+.register-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.register-form h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input and Button Styles (Apply to both forms) */
+input[type="email"], input[type="password"], input[type="text"] ,button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-form, .register-form {
+    padding: 1rem;
+    width: 100%;
+    max-width: 350px;
+  }
+  .login-form h2, .register-form h2 {
+    font-size: 1.5rem;
+  }
+  input[type="email"], input[type="password"] {
+    padding: 8px;
+  }
+}
+
+
+.welcome-message {
+  text-align: centre;
+  font-size: 3rem; /* Large font size */
+  font-weight: 700; /* Make it bold */
+  color: #000000; /* Green color (can be adjusted as needed) */
+  margin-top: 100px; /* Adds space from the top */
+  font-family: 'Roboto', sans-serif; /* Modern font */
+  letter-spacing: 2px; /* Adds spacing between letters */
+  height: 1vh;
+}
+
+/*  the main content is centered on the screen */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
